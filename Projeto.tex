@@ -1,20 +1,123 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CABECALHO %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \documentclass[a4paper]{abnt}
 
-\usepackage[brazilian]{babel}
+\usepackage[brazil]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 
 \author{Igor~Santos}
-\title{Insert~Coin}
+\title{Proposta de Trabalho para Projeto de TCC}
 
 \begin{document}
-
 \maketitle
 
-\section{First Section}
-This is where everything starts.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% INICIO %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{\mbox{Proposta de Trabalho de Projeto de TCC}}
 
-\section{Second Section}
-Nothing here.
+\textbf{Ano:} \underline{2014} \textbf{Semestre:} \underline{2}
+
+\textbf{Nome do Aluno:} \underline{Igor Gomes dos Santos}
+
+\textbf{Matrícula:} \underline{2011.01.12519-5}
+
+\textbf{Professor Orientador:} \underline{José Carlos Millan}
+
+\textbf{Título Provisório do Projeto:} \underline{Insert Coin}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introdução}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{O Projeto}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Problemas a serem resolvidos}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Vantagens para o usuario}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Aprendizado para o aluno}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Metodologia e Tecnologias a serem utilizadas}
+O projeto sera elaborado utilizando as seguintes ferramentas:
+
+\subsection{Para a documentação}
+\begin{itemize}
+	\item Análise dos requisitos e objetivos do projeto em \LaTeX{} (para portabilidade e flexibilidade de desenvolvimento dos documentos);
+	\item Diagramas UML (para fluxos de dados, estados, e das aplicações).
+\end{itemize}
+	
+\subsection{Para a administração do projeto}
+\begin{itemize}
+	\item Código e documentos disponíveis em repositórios privados Git no BitBucket;
+	\item Organização e priorização de tarefas e milestones integrados ao repositório.
+\end{itemize}
+	
+\subsection{Para o desenvolvimento}
+
+\subsubsection{Servidor de comunicação distribuída:}
+\begin{itemize}
+	\item
+		Baseado em \emph{REST}
+			\footnote{\emph{Representational State Transfer} - Transferencia de Estado 
+				Representativo, modelo de abstracao de comunicacao distribuida baseado
+				em hipermidia}
+		e desenvolvido em PHP com a biblioteca \emph{Restler}
+			\footnote{Biblioteca PHP que abstrai os recursos \emph{REST} para classes de OO};
+
+		\item
+		Banco de dados \emph{MySQL} ou \emph{MongoDB}.
+			\footnote{MySQL e um banco de dados relacional, enquanto o MongoDB e nao-relacional}
+		A decisao dentre um dos dois dependera do formato mais adequado para transporte
+		e armazenagem dos dados de fluxo de caixa.
+\end{itemize}
+
+\subsubsection{Interface de usuário web:}
+\begin{itemize}
+	\item
+		JavaScript com \emph{framework MV*}
+			\footnote{Sigla ``guarda-chuva'' que abriga diversos formatos de organizacao de
+				framework originalmente baseados no modelo \emph{MVC}, mas que usam outros
+				tipos de componentes para suprir as tarefas de roteamento e controle de
+				requisicoes e comportamentos do usuario}
+		-- provavelmente o \emph{Ember}, pois ele fornece tecnologias avançadas de interface
+		aliadas ao processamento facilitado de armazenamento de dados remotos via \emph{REST};
+			
+	\item Folhas de estilo \emph{Less}, para melhor manutenção e organização
+		\footnote{Less e um pre-processador de CSS que tem como principal funcionalidade a
+			possibilidade de aninhar referencias CSS, de modo a diminuir a repeticao de codigo
+			e evitar erros, facilitando tambem a manutencao e o entendimento da estrutura};
+			
+	\item \emph{Layout} fluido e responsivo, para que a utilização do sistema seja agradavel tanto em um
+		computador \emph{desktop}, \emph{tablet}, ou celular, mesmo sem um aplicativo móvel dedicado;
+		
+	\item Capacidade de trabalho \emph{offline} e de sincronização após reconexão, a partir de bibliotecas
+		de armazenamento \emph{client-side} \emph{(para em browsers modernos)}.
+\end{itemize}
+
+\pagebreak
+\subsubsection{Interfaces de usuário móvel:}
+Em primeira instância, o aplicativo web suprirá a maioria dos Casos de Uso móveis.
+Para além deles, e para a melhoria da \emph{UX}, um aplicativo nativo será criado.
+	
+\begin{itemize}
+\item Plataforma de desenvolvimento único para múltiplos sistemas (que suporte \emph{iOS} e \emph{Android}, e
+talvez \emph{Windows~Phone} e \emph{Blackberry}). A plataforma ainda não foi definida, mas o principal cadidato
+é o \emph{Appcelerator Titanium}, por permitir o uso de uma só linguagem de desenvolvimento (JS, e o uso opcional
+de XML para os templates) e a compilação posterior em aplicativos verdadeiramente nativos -- diferente de outras
+plataformas que se baseiam em \emph{WebViews}.	
+\end{itemize}
+
+
+
 
 \end{document}
