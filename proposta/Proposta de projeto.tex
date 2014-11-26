@@ -19,11 +19,11 @@
 \begin{center}
 	\begin{tabular}{|r|l|}
 		\hline
-		\textbf{Semestre:} & 2 \\\hline
 		\textbf{Nome do Aluno:} & Igor Gomes dos Santos \\\hline
 		\textbf{Matrícula:} & 2011.01.12519-5 \\\hline
 		\textbf{Professor Orientador:} & José Carlos Millan \\\hline
 		\textbf{Título Provisório do Projeto:} & Insert Coin \\\hline
+		\textbf{Ano:} & 2012.2 \\\hline
 	\end{tabular}
 \end{center}
 
@@ -35,14 +35,14 @@ Finanças. Seu objetivo é transformar a organização financeira de uma pessoa 
 
 Em verdade, o principal diferencial do produto em relação à concorrência atual no mercado será o controle de cartões de crédito. O brasileiro tem o costume de considerar o cartão como um ``gasto'', uma despesa que atrapalha o bom andamento do orçamento familiar, sendo assim um ``mal necessário'' devido aos seus benefícios no adiamento de compras.
 
-O objetivo do \textbf{Insert Coin} nesse sentido é auxiliar o usuário no entendimento dos seus cartões de crédito, e integrá-los ao seu fluxo de caixa normal. Tal fluxo é comumente baseado na entrada de poucas fonte de renda (de alto volume), e a saída em diversas despesas mensais (de volume menor). O cartão de crédito, por ser um concentrador de despesas que adia o pagamento de diversos eventos para um único dia, tende mais confundir do que a ajudar. O usuário precisa compreender bem a dinâmica dos dias de fechamento e de abertura de nova fatura, do “melhor dia para compra”, o dia do vencimento e quais são os valores possíveis de pagamento – e quais as consequências de não pagar a fatura em cheio. Além disso, o lançamento de despesas ocorre com diversos dias de diferença entre o evento e seu aparecimento na fatura parcial. Tudo isso vai muito além do fluxo simples de sua conta-corrente e seu cartão de débito, que consiste em receber o salário do mês, e lançamentos instantâneos do uso do cartão de débito.
+O objetivo do \textbf{Insert Coin} nesse sentido é auxiliar o usuário no entendimento dos seus cartões de crédito, e integrá-los ao seu fluxo de caixa normal. Tal fluxo é comumente baseado na entrada de poucas fontes de renda (de alto volume), e a saída em diversas despesas mensais (de volume menor). O cartão de crédito, por ser um concentrador de despesas que adia o pagamento de diversos eventos para um único dia, tende mais confundir do que a ajudar. O usuário precisa compreender bem a dinâmica dos dias de fechamento e de abertura de nova fatura, do ``melhor dia para compra'', o dia do vencimento e quais são os valores possíveis de pagamento – e quais as consequências de não pagar a fatura em cheio. Além disso, o lançamento de despesas ocorre com diversos dias de diferença entre o evento e seu aparecimento na fatura parcial. Tudo isso vai muito além do fluxo simples de sua conta-corrente e seu cartão de débito, que consiste em receber o salário do mês, e lançamentos instantâneos do uso do cartão de débito.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{O Projeto}
 
 Inicialmente chamado de \textbf{Insert Coin}, ele é principalmente um sistema baseado no lançamento de entradas e saídas de uma ou mais contas de finanças. Ele se assemelha à organização de um Livro-Caixa empresarial, onde o usuário marcará todos os valores recebidos e gastos de uma determinada conta. 
 
-Atualmente existem diversos sistemas no mercado, tanto web quanto móvel, que atendem a esse tipo de usuário, auxiliando na visualização e controle das despesas mensais. Boa parte deles tem o mesmo princípio, inclusive. Considerando esse ponto de vista, o sistema será pouco diferente do que já existe no mercado e, por exemplo, não incentivará a migração dos usuários de concorrentes para o nosso projeto.
+Atualmente existem diversos sistemas no mercado, tanto web quanto móvel, que atendem a esse tipo de usuário, auxiliando na visualização e controle das despesas mensais. Boa parte deles tem o mesmo princípio, inclusive. Portanto, se considerarmos somente esta \emph{feature}, o sistema será pouco diferente do que já existe no mercado e, por exemplo, não incentivará a migração dos usuários de concorrentes para o nosso projeto. Para remediar isso tentaremos inovar na interface e na facilidade de entrada de dados, que é um dos grandes obstáculos para a introdução deste tipo de sistema na rotina do usuário.
 
 Por outro lado, somente um dos sistemas encontrados tenta suprir as peculiaridades do mercado de cartões de crédito nacional, de forma muito vaga e primariamente informativa. O método a ser utilizado aqui é bem mais ativo: ele auxilia o usuário a entender como o cartão de crédito afeta seu fluxo de caixa e insere, como despesas comuns, os eventos nos quais o cartão foi utilizado. O objetivo é evitar a segregação comum que o brasileiro faz em considerar o cartão de crédito com uma mais uma conta/boleto a pagar, como é a eletricidade ou a água da casa. No cartão são feitos gastos assim como ocorrem na conta de débito: lazer, vestuário, transporte, educação, etc. Portanto, porque devemos pensar em ``reduzir os gastos do cartão'' ao invés de ``reduzir os gastos mensais''?
 
@@ -124,7 +124,7 @@ O projeto será elaborado utilizando as seguintes ferramentas:
 			
 	\item \emph{Layout} fluido e responsivo, para que a utilização do sistema seja agradável tanto em um computador \emph{desktop}, \emph{tablet}, ou celular, mesmo sem utilizar um aplicativo móvel \mbox{dedicado};
 		
-	\item Capacidade de trabalho \emph{offline} e de sincronização após reconexão, a partir de bibliotecas de armazenamento \emph{client-side} \emph{(para em browsers modernos)}.
+	\item Capacidade de trabalho \emph{offline} e de sincronização após reconexão, a partir de bibliotecas de armazenamento \emph{client-side} \emph{(para browsers modernos)}.
 \end{itemize}
 
 \subsubsection{Interfaces de usuário móvel:}
