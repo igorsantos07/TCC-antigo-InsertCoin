@@ -20,7 +20,7 @@
 \contentsline {section}{\numberline {4.2}Casos de Uso}{9}
 \contentsline {subsection}{\numberline {4.2.1}Diagramas}{9}
 \contentsline {subsection}{\numberline {4.2.2}Especificacoes}{9}
-\contentsline {section}{\numberline {4.3}Diagrama Geral de Fluxo de Comunicacao (?!)}{9}
+\contentsline {section}{\numberline {4.3}Diagrama Geral de Fluxo de Comunicacao (Topologia?)}{9}
 \contentsline {section}{\numberline {4.4}Modelo Conceitual de Dados}{9}
 \contentsline {section}{\numberline {4.5}Modelo Conceitual de Classes}{9}
 \contentsline {section}{\numberline {4.6}Modelo Conceitual de Dados}{9}
