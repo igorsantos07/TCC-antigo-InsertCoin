@@ -18,44 +18,44 @@ Database file #2: projeto.bib
 Biblatex version: 1.7
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
-You've used 2 entries,
+You've used 4 entries,
             6019 wiz_defined-function locations,
-            1127 strings with 8194 characters,
-and the built_in function-call counts, 3793 in all, are:
-= -- 147
-> -- 136
-< -- 26
-+ -- 56
-- -- 50
-* -- 177
-:= -- 434
+            1139 strings with 8434 characters,
+and the built_in function-call counts, 17438 in all, are:
+= -- 521
+> -- 1668
+< -- 172
++ -- 1315
+- -- 1270
+* -- 692
+:= -- 2145
 add.period$ -- 0
-call.type$ -- 2
-change.case$ -- 9
-chr.to.int$ -- 34
-cite$ -- 2
-duplicate$ -- 311
-empty$ -- 382
-format.name$ -- 48
-if$ -- 863
+call.type$ -- 4
+change.case$ -- 51
+chr.to.int$ -- 154
+cite$ -- 6
+duplicate$ -- 1404
+empty$ -- 1283
+format.name$ -- 153
+if$ -- 2823
 int.to.chr$ -- 0
-int.to.str$ -- 2
+int.to.str$ -- 11
 missing$ -- 0
-newline$ -- 40
-num.names$ -- 41
-pop$ -- 359
+newline$ -- 97
+num.names$ -- 159
+pop$ -- 979
 preamble$ -- 1
-purify$ -- 10
+purify$ -- 54
 quote$ -- 0
-skip$ -- 231
+skip$ -- 730
 stack$ -- 0
-substring$ -- 132
-swap$ -- 89
-text.length$ -- 41
-text.prefix$ -- 1
+substring$ -- 706
+swap$ -- 467
+text.length$ -- 141
+text.prefix$ -- 3
 top$ -- 1
-type$ -- 64
+type$ -- 140
 warning$ -- 0
-while$ -- 67
+while$ -- 196
 width$ -- 0
-write$ -- 37
+write$ -- 92

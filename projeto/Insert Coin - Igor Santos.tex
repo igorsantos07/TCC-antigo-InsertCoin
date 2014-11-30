@@ -63,7 +63,27 @@ Por fim, para organizar o fluxo de código, será utilizado o \emph{GitFlow}\cit
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Previsão de Alocação de Recursos}
-\emph{Listagem das necessidades de software e hardware, e uma previa dos custos disso ao longo do tempo.}
+
+\subsection*{Recursos Humanos}
+\begin{itemize}
+	\item 1 Analista de Sistemas S\^enior;
+	\item 1 Designer multi-plataforma \emph{freelancer};\footnotemark
+	\item 1 Analista de marketing \emph{freelancer} (para o marketing inicial do produto; futuramente, integrar\'a a equipe permanente).
+\end{itemize}
+\footnotetext{Ou dois designers, sendo um deles webdesigner, e o outro, designer de aplicações móveis}
+
+\subsection*{Recursos Materiais}
+\begin{itemize}
+	\item Inst\^ancias no \emph{Heroku} (é possível começar com pouco e expandir facilmente no futuro\cite{heroku}) com as seguintes configurações / add-ons:
+	\begin{itemize}
+		\item \emph{Dynos} (máquinas que processam \emph{requests} web) com \textbf{PHP 5.5}
+		\item Servidor \textbf{PostgreSQL}, também facilmente escalável e seguro\cite{heroku-pgsql}
+		\item Servidor de \emph{Memcache} \textbf{MemCachier} para caches temporários de aplicação
+		\item \textbf{Mandrill by MailChimp} para envio de e-mails de lembretes
+		\item \textbf{NewRelic} para monitoria da performance da aplicação e do banco de dados
+		\item \textbf{Rollbar} para monitoria de erros nas aplicações
+	\end{itemize}
+\end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Cronograma de Trabalho}

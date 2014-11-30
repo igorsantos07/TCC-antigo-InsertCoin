@@ -24,6 +24,9 @@
      {}{}%
      {}{}}%
   }
+  \list{language}{1}{%
+    {Inglês}%
+  }
   \strng{namehash}{DV1}
   \strng{fullhash}{DV1}
   \field{sortinit}{D}
@@ -31,7 +34,62 @@
   \verb{url}
   \verb http://nvie.com/posts/a-successful-git-branching-model/
   \endverb
+  \field{day}{05}
+  \field{month}{01}
   \field{year}{2010}
+  \field{urlday}{29}
+  \field{urlmonth}{11}
+  \field{urlyear}{2014}
+\endentry
+
+\entry{heroku}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {{Heroku,~Inc.}}{H.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \list{language}{1}{%
+    {Inglês}%
+  }
+  \strng{namehash}{H1}
+  \strng{fullhash}{H1}
+  \field{sortinit}{H}
+  \field{note}{Informações sobre escalabilidade, recursos adicionais,
+  monitoramento, etc}
+  \field{title}{Heroku~|~Features}
+  \verb{url}
+  \verb https://www.heroku.com/features
+  \endverb
+  \field{year}{2014}
+  \field{urlday}{30}
+  \field{urlmonth}{11}
+  \field{urlyear}{2014}
+\endentry
+
+\entry{heroku-pgsql}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {{Heroku,~Inc.}}{H.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \list{language}{1}{%
+    {Inglês}%
+  }
+  \strng{namehash}{H1}
+  \strng{fullhash}{H1}
+  \field{sortinit}{H}
+  \field{title}{Heroku~|~Postgres}
+  \verb{url}
+  \verb https://www.heroku.com/postgres
+  \endverb
+  \field{year}{2014}
+  \field{urlday}{30}
+  \field{urlmonth}{11}
+  \field{urlyear}{2014}
 \endentry
 
 \lossort
