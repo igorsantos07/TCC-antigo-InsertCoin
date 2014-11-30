@@ -1,0 +1,40 @@
+% $ biblatex auxiliary file $
+% $ biblatex version 1.7 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\entry{gitflow}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Driessen}{D.}%
+     {Vincent}{V.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{DV1}
+  \strng{fullhash}{DV1}
+  \field{sortinit}{D}
+  \field{title}{A successful Git branching model}
+  \verb{url}
+  \verb http://nvie.com/posts/a-successful-git-branching-model/
+  \endverb
+  \field{year}{2010}
+\endentry
+
+\lossort
+\endlossort
+
+\endinput

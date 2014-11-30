@@ -1,11 +1,17 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CABECALHO %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\documentclass[a4paper,article]{abnt}
+\documentclass[a4paper]{abnt}
 
-\usepackage[brazil]{babel}
 \usepackage[utf8]{inputenc}
+\usepackage{csquotes}
+\usepackage[brazil]{babel}
 \usepackage[T1]{fontenc}
 \usepackage[all,defaultlines=2]{nowidow}
 \usepackage[multiple]{footmisc}
+\usepackage{xcolor,graphicx}
+\usepackage[backend=bibtex,backref=true]{biblatex}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=black,citecolor=red]{hyperref}
+
+\bibliography{projeto}
 
 \author{Igor~Santos}
 \title{Projeto~de~TCC - Insert~Coin}
@@ -28,7 +34,7 @@ Em verdade, o principal diferencial do produto em relação à concorrência atu
 O objetivo do \textbf{Insert Coin} nesse sentido é auxiliar o usuário no entendimento dos seus cartões de crédito, e integrá-los ao seu fluxo de caixa normal. Tal fluxo é comumente baseado na entrada de poucas fontes de renda (de alto volume), e a saída em diversas despesas mensais (de volume menor). O cartão de crédito, por ser um concentrador de despesas que adia o pagamento de diversos eventos para um único dia, tende mais confundir do que a ajudar. O usuário precisa compreender bem a dinâmica dos dias de fechamento e de abertura de nova fatura, do ``melhor dia para compra'', o dia do vencimento e quais são os valores possíveis de pagamento – e quais as consequências de não pagar a fatura por completo. Além disso, o lançamento de despesas ocorre com diversos dias de diferença entre o evento e seu aparecimento na fatura parcial. Tudo isso vai muito além do fluxo simples de sua conta-corrente e seu cartão de débito, que consiste em receber o salário do mês, e lançamentos instantâneos do uso do cartão de débito.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section*{O Projeto}
+\section{O Projeto}
 
 Inicialmente chamado de \textbf{Insert Coin}, ele é principalmente um sistema baseado no lançamento de entradas e saídas de uma ou mais contas de finanças. Ele se assemelha à organização de um Livro-Caixa empresarial, onde o usuário marcará todos os valores recebidos e gastos de uma determinada conta. 
 
@@ -43,11 +49,20 @@ O que mais cria dúvidas no cartão de crédito é que sua fatura é finalizada 
 A proposta é coletar as datas importantes do cartão e orientar o usuário para que, sempre que possível, a fatura seja paga em cheio no dia do vencimento (em débito automático, por exemplo). Esta é, de acordo com os especialistas da área, a melhor forma de conviver com o cartão, pois não gera juros adicionais em cima do que não foi pago. A partir daí, o usuário terá configurada sua conta-corrente do sistema para que as despesas que ocorrerem no cartão de crédito sejam visualizadas simultaneamente às da conta, no período que corresponda ao pagamento da fatura. Conforme vão surgindo novas despesas no cartão de crédito, o usuário poderá visualizar diretamente seu o impacto no orçamento dos meses seguintes. Também será possível entender de forma prática a fatura do cartão do mês em visualização, juntamente com as contas a serem pagas e as despesas comuns em débito -- afinal de contas, é na conta-corrente que a ação financeira acontece.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Metodo de Trabalho}
-\emph{Explicar resumidamente a metodologia de trabalho, como serao usados os sistemas de ticketagem para organizacao de tarefas e os procedimentos de backup (versionamento) e deploy.}
+\section{Método de Trabalho}
+O desenvolvimento do sistema será gerido a partir da área de \emph{Issues} do \textbf{Github}. Lá é possível criar tarefas, categorizar (a partir de \emph{tags}), delegar e ordenar temporalmente. O andamento do projeto será acompanhado a partir de \emph{milestones} configurados no mesmo subsistema, todos com claras datas de finalização.
+
+O \textbf{Github}, além de possuir um subsistema de tarefas, serve principalmente para armazenar na \emph{cloud} um servidor centralizado de \emph{git}. Dessa forma temos automaticamente um sistema eficiente de backup do código do sistema. Ele também participa do ambiente auxiliando a entender o histórico de desenvolvimento no decorrer do tempo; o \emph{git} armazena todas as alterações de código que forem feitas, o que nos ajuda a analisar nossa produtividade e facilmente encontrar os responsáveis por partes do sistema -- útil, por exemplo, quando ocorrer um \emph{bug} inesperado e que precisa ser rapidamente corrigido.
+
+Por fim, para organizar o fluxo de código, será utilizado o \emph{GitFlow}\cite{gitflow} uma metodologia de versionamento que organiza as \emph{tags} de um repositório de forma lógica. A organização precisa desse sistema nos permite criar um fluxo contínuo de \emph{deploys}; podemos configurar nossos servidores de produção para \emph{escutarem} a \emph{tag master} e sempre que houver novos \emph{commits}, eles podem importar a nova versão - isso é feito a partir de \emph{git hooks}, ou automaticamente por alguns sistemas de \emph{PaaS}.
+
+\begin{figure}
+	\includegraphics[scale=0.65]{img/gitflow.png}
+	\caption{Exemplo de como \emph{GitFlow} funciona, exibindo os diversos \emph{branches} da metodologia.}
+\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Previsao de Alocacao de Recursos}
+\section{Previsão de Alocação de Recursos}
 \emph{Listagem das necessidades de software e hardware, e uma previa dos custos disso ao longo do tempo.}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -55,7 +70,7 @@ A proposta é coletar as datas importantes do cartão e orientar o usuário para
 \emph{Diagrama de Gantt.}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{A Empresa e o Negocio}
+\chapter{A Empresa e o Negócio}
 \emph{Explicar qual e o objetivo do projeto a curto e medio prazo (objetivos de estudo e de rentabilidade).}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -123,5 +138,8 @@ A proposta é coletar as datas importantes do cartão e orientar o usuário para
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Modelo Conceitual de Dados}
 \emph{Auto-explicativo.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\printbibliography
 
 \end{document}
