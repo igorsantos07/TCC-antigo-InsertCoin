@@ -15,13 +15,13 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: Insert_Coin_-_Igor_Santos-blx.bib
 Database file #2: projeto.bib
-Biblatex version: 1.7
+Biblatex version: 2.8
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 You've used 4 entries,
-            6019 wiz_defined-function locations,
-            1139 strings with 8434 characters,
-and the built_in function-call counts, 17438 in all, are:
+            6047 wiz_defined-function locations,
+            1146 strings with 8493 characters,
+and the built_in function-call counts, 17480 in all, are:
 = -- 521
 > -- 1668
 < -- 172
@@ -34,16 +34,16 @@ call.type$ -- 4
 change.case$ -- 51
 chr.to.int$ -- 154
 cite$ -- 6
-duplicate$ -- 1404
-empty$ -- 1283
+duplicate$ -- 1413
+empty$ -- 1292
 format.name$ -- 153
-if$ -- 2823
+if$ -- 2832
 int.to.chr$ -- 0
 int.to.str$ -- 11
 missing$ -- 0
 newline$ -- 97
 num.names$ -- 159
-pop$ -- 979
+pop$ -- 994
 preamble$ -- 1
 purify$ -- 54
 quote$ -- 0

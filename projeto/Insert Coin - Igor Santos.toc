@@ -18,40 +18,40 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {2}A Empresa e o Neg\IeC {\'o}cio}{9}{chapter.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.1}Historico}{9}{section.2.1}
+\contentsline {section}{\numberline {2.1}Historico}{10}{section.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.2}Mercado Consumidor}{9}{section.2.2}
+\contentsline {section}{\numberline {2.2}Mercado Consumidor}{10}{section.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.3}Concorrencia}{9}{section.2.3}
+\contentsline {section}{\numberline {2.3}Concorrencia}{10}{section.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.4}Premissas e Restricoes ao Projeto}{9}{section.2.4}
+\contentsline {section}{\numberline {2.4}Premissas e Restricoes ao Projeto}{10}{section.2.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Os Sistemas Atuais}{10}{chapter.3}
+\contentsline {chapter}{\numberline {3}Os Sistemas Atuais}{11}{chapter.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}Principais Concorrentes}{10}{section.3.1}
+\contentsline {section}{\numberline {3.1}Principais Concorrentes}{11}{section.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Outros Sistemas}{10}{section.3.2}
+\contentsline {section}{\numberline {3.2}Outros Sistemas}{11}{section.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}Motivacao para o Novo Sistema}{10}{section.3.3}
+\contentsline {section}{\numberline {3.3}Motivacao para o Novo Sistema}{11}{section.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3.1}Problemas dos Sistemas Atuais}{10}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.1}Problemas dos Sistemas Atuais}{11}{subsection.3.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3.2}Situacao Desejada}{10}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.2}Situacao Desejada}{11}{subsection.3.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}O Sistema Proposto}{11}{chapter.4}
+\contentsline {chapter}{\numberline {4}O Sistema Proposto}{12}{chapter.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Requisitos do Sistema}{11}{section.4.1}
+\contentsline {section}{\numberline {4.1}Requisitos do Sistema}{12}{section.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Casos de Uso}{11}{section.4.2}
+\contentsline {section}{\numberline {4.2}Casos de Uso}{12}{section.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.1}Diagramas}{11}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.1}Diagramas}{12}{subsection.4.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.2}Especificacoes}{11}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.2}Especificacoes}{12}{subsection.4.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}Diagrama Geral de Fluxo de Comunicacao (Topologia?)}{11}{section.4.3}
+\contentsline {section}{\numberline {4.3}Diagrama Geral de Fluxo de Comunicacao (Topologia?)}{12}{section.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.4}Modelo Conceitual de Classes / Servicos REST}{11}{section.4.4}
+\contentsline {section}{\numberline {4.4}Modelo Conceitual de Classes / Servicos REST}{12}{section.4.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.5}Modelo Conceitual de Dados}{11}{section.4.5}
+\contentsline {section}{\numberline {4.5}Modelo Conceitual de Dados}{12}{section.4.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliografia}{12}{chapter*.2}
+\contentsline {chapter}{Bibliografia}{13}{chapter*.2}

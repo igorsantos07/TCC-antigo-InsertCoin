@@ -66,15 +66,14 @@ Por fim, para organizar o fluxo de código, será utilizado o \emph{GitFlow}\cit
 
 \subsection*{Recursos Humanos}
 \begin{itemize}
-	\item 1 Analista de Sistemas S\^enior;
-	\item 1 Designer multi-plataforma \emph{freelancer};\footnotemark
-	\item 1 Analista de marketing \emph{freelancer} (para o marketing inicial do produto; futuramente, integrar\'a a equipe permanente).
+	\item 1 Analista de Sistemas Sênior;
+	\item 1 Designer multi-plataforma (\textit{web} e m\'ovel);\footnotemark
+	\item 1 Analista de marketing \emph{freelancer} (para o marketing inicial do produto; futuramente, integrará a equipe permanente).
 \end{itemize}
-\footnotetext{Ou dois designers, sendo um deles webdesigner, e o outro, designer de aplicações móveis}
 
 \subsection*{Recursos Materiais}
 \begin{itemize}
-	\item Inst\^ancias no \emph{Heroku} (é possível começar com pouco e expandir facilmente no futuro\cite{heroku}) com as seguintes configurações / add-ons:
+	\item Instâncias no \emph{Heroku} (é possível começar com pouco e expandir facilmente no futuro\cite{heroku}) com as seguintes configurações / add-ons:
 	\begin{itemize}
 		\item \emph{Dynos} (máquinas que processam \emph{requests} web) com \textbf{PHP 5.5}
 		\item Servidor \textbf{PostgreSQL}, também facilmente escalável e seguro\cite{heroku-pgsql}
@@ -91,15 +90,34 @@ Por fim, para organizar o fluxo de código, será utilizado o \emph{GitFlow}\cit
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{A Empresa e o Negócio}
-\emph{Explicar qual e o objetivo do projeto a curto e medio prazo (objetivos de estudo e de rentabilidade).}
+O objetivo do projeto é entrar num mercado já saturado de aplicativos similares com uma lista de diferenciais para atrair os consumidores que ainda não utilizam sistemas automatizados de gestão financeira ou se sentem insatisfeitos com as soluções que usam atualmente. Para isso, a equipe de desenvolvimento focará numa usabilidade simples e no menor atrito possível para entrada de novos lançamentos. E, por outro lado, o diferencial em funcionalidades terá como carro-chefe o tratamento do cartão de crédito de forma diferenciada das contas corrente e poupança, como nenhum aplicativo do mercado faz atualmente.
 
+Todos os responsáveis pelo projeto tem larga experiência prática em diversos métodos de organização financeira e são usuários de diferentes sistemas do mercado. Portanto, todos são hábeis de opinar e desenvolver o projeto da melhor forma possível, com boas sugestões de funcionalidades e ao mesmo tempo evitando os erros (de acordo com nosso ponto de vista) já cometidos pela concorrência.
+
+O sistema funcionará no modo \textit{freemium}, onde os usuários terão acesso a um grupo limitado de funcionalidades e precisarão pagar mensalmente caso desejem utilizar as funções avançadas. A lista final do que será de uso gratuito e do que será pago só será de fato conhecida quando o escopo do projeto for fechado; no entanto, segue um exemplo de algumas funcionalidades mais complexas e que fazem sentido entrar na lista \textit{premium}:
+\begin{itemize}
+	\item Gr\'aficos e an\'alises financeiras sobre os gastos mensais e anuais
+	\item Ter mais de duas contas (sendo uma corrente e uma poupança\footnote{Isso caracterizaria um usu\'ario avançado, visto que o caso mais comum \'e o brasileiro ter uma conta-corrente onde recebe seu pagamento (ou uma conta-sal\'ario e uma corrente), e talvez uma poupança onde ele guarda suas economias, e diversos cart\~oes de cr\'edito.})
+	\item A possibilidade de planejar o pagamento parcial de uma fatura de cart\~ao de cr\'edito
+	\item Uso do aplicativo m\'ovel em modo offline, permitindo sincronia de dados quando o aparelho entrar numa conex\~ao \textit{WiFi}
+	\item Integraç\~ao entre mais de um usu\'ario numa mesma conta -- por exemplo, um casal usando o mesmo sistema a partir de dois \textit{logins} diferentes
+\end{itemize}
+ 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Historico}
-\emph{Explicar aqui a experiencia academica e tecnica do criador do sistema (mini-curriculo?)}
+A empresa respons\'avel pelo \textbf{Insert Coin} foi criada especialmente para o projeto, a partir da sintonia de ideias entre o Analista e o Designer a cargo. A ideia surgiu quando o Analista se sentia insatisfeito com o sistema de gest\~ao que utilizava e n\~ao conseguiu encontrar substituto eficaz no mercado. O que mais lhe incomodava era n\~ao ser f\'acil controlar os gastos em cart\~ao de cr\'edito, pois as aplicações disponíveis só possuíam a distinção entre múltiplas ``contas'', e o ciclo de vida de uma fatura acabava por ficar misturado com o fluxo de caixa da conta-corrente, por exemplo. A ideia foi fomentada aos poucos e então surgiu a oportunidade de, junto ao seu colega de graduação, iniciar a estruturação e o desenvolvimento do projeto.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Mercado Consumidor}
-\emph{Citar alguns grupos de usuarios comuns do sistema}
+O público-alvo do projeto tem uma ou mais das seguintes características:
+\begin{itemize}
+	\item No que tange sua relação com suas finanças:
+	\begin{enumerate}
+		\item Nunca se informou sobre educação financeira antes, mas começou a se interessar sobre o assunto;
+		\item Já tem um certo nível de organização financeira, mas ela é falha ou rudimentar;
+		\item Tem suas planilhas eletrônicas financeiras, mas são complexas de usar e engessadas;
+	\end{enumerate}
+\end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Concorrencia}
