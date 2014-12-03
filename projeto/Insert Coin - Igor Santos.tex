@@ -109,6 +109,7 @@ A empresa responsável pelo \textbf{Insert Coin} foi criada especialmente para o
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Mercado Consumidor}
+\label{sec:mercado}
 O público-alvo do projeto tem uma ou mais de cada uma das seguintes características:
 \begin{enumerate}
 	\item Em relação às suas finanças:
@@ -130,45 +131,100 @@ Ou seja, nosso principal mercado consumidor tem algum contato com tecnologia e s
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Concorrência}
-Atualmente no mercado h\'a diversas empresas focadas em produtos similaeres ao que propomos neste projeto. No entanto, foi identificado que nenhum deles oferece todas as funcionalidades que planejamos implementar, o que significa que, ap\'os o lançamento vamos estar \`a frente da concorr\^encia e aptos a conquistar novos clientes, sejam estes experientes em outros produtos ou interessados em experimentar algo novo. Listamos aqui as principais empresas concorrentes at\'e o momento:
+Atualmente no mercado há diversas empresas focadas em produtos similaeres ao que propomos neste projeto. No entanto, foi identificado que nenhum deles oferece todas as funcionalidades que planejamos implementar, o que significa que, após o lançamento vamos estar à frente da concorrência e aptos a conquistar novos clientes, sejam estes experientes em outros produtos ou interessados em experimentar algo novo.\\
+Listamos aqui as principais empresas concorrentes até o momento:
 
-\begin{tabular}{|c|c|c|}
-\hline 
-\textbf{Granatum} & \textbf{Organizz}e & \textbf{Mint (americano)} \\ 
-\hline 
-Yupee & MyFreeComm Finance & Manubia \\ 
-\hline 
-GBolso & Spesa & Money Care \\ 
-\hline 
-Monefy & \multicolumn{2}{c|}{\emph{Outras dezenas de aplicativos m\'oveis similares...}} \\ 
-\hline 
-\end{tabular}
+\begin{center}
+	\begin{tabular}{|c|c|c|}
+		\hline 
+		\textbf{Granatum} & \textbf{Organizz}e & \textbf{Mint (americano)} \\\hline 
+		Yupee & MyFreeComm Finance & Manubia \\\hline 
+		Monefy & \multicolumn{2}{c|}{\emph{Outros aplicativos móveis similares}} \\\hline 
+	\end{tabular}
+\end{center}
 
-Foi notado que algumas empresas possuem sistemas de parceria com algumas instituiç\~oes banc\'arias, o que em tese poderia trazer mais clientes destes bancos aos seus aplicativos. No entanto, n\~ao h\'a not\'icia de divulgaç\~ao destes sistemas dentro das ag\^encias ou em outros ve\'iculos relacionados aos bancos. Isso nos leva a crer que a parceria foi criada para iniciar um processo de integraç\~ao banc\'aria, mas por motivos alheios ao conhecimento p\'ublico, tal integraç\~ao n\~ao evoluiu com outros bancos.\\
-A \'unica exceç\~ao a essa regra \'e o \emph{Mint}, mas que n\~ao representa concorr\^encia direta pois nem sequer faz parte do mercado brasileiro. Apesar disso, ele \'e listado aqui para servir de exemplo de como a vida do \'usuario pode ser facilitada; o sistema do \emph{Mint} possui integraç\~ao com uma longa, longa lista de instituiç\~oes financeiras dos Estados Unidos e do Canad\'a. Isso permite que os usu\'arios n\~ao precisem mais criar novas entradas manualmente para se organizarem -- o aplicativo web busca as informaç\~oes diretamente nos sistemas do banco.
+Foi notado que algumas empresas possuem parceria com algumas instituições bancárias, o que em tese poderia trazer mais clientes destes bancos aos seus aplicativos. No entanto, não há notícia de divulgação destes sistemas dentro das agências ou em outros veículos relacionados aos bancos. Isso nos leva a crer que a parceria foi criada para iniciar um processo de integração bancária, mas por motivos alheios ao conhecimento geral, tal integração não evoluiu com outros bancos. 
+A única exceção a essa regra é o \emph{Mint}, mas que não representa concorrência direta por n\~ao fazer parte do mercado nacional. Apesar disso, ele é listado aqui para servir de exemplo sobre como a vida do usuário pode ser facilitada; o sistema do \emph{Mint} possui integração com uma longa, longa lista de instituições financeiras dos Estados Unidos e do Canadá. Isso permite que o usuário não precise criar novas entradas manualmente para se organizar -- o sistema busca, em \emph{background}, as informações diretamente com os bancos e administradoras de cart\~oes.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Premissas e Restrições ao Projeto}
-\emph{Explicar as ideias basicas e features essenciais, e o que nao sera possivel fazer no momento ou fica fora do escopo ideal do projeto.}
+Os principais objetivos do projeto, a nível de funcionalidades, seguem abaixo. A lista está ordenada aproximadamente por prioridade de implementaç\~ao, e os itens enfatizados provavelmente far\~ao parte da lista de recursos avançados, oferecidos somente aos usuários \emph{premium}:
+\begin{enumerate}
+	\item Lançamento de despesas diárias e visualizaç\~ao em estilo de planilha;
+	\item Divis\~ao em contas distintas, com tratamento especial para cart\~oes de crédito;
+	\item Categorias personalizadas de lançamentos, com cores para facilitar identificaç\~ao;
+	\item Categorizaç\~ao opcional por meio de pagamento (boleto, cart\~ao, transfer\^encia, etc);
+	\item Inclus\~ao de lançamentos parcelados e periódicos;
+	\item Filtragem de despesas por m\^es ou período de livre escolha;
+	\item \emph{Acompanhamento de metas de valores mensais para categorias definidas;}
+	\item Planejamento avançado dos próximos meses, a partir dos lançamentos futuros e das metas pretendidas;
+	\item Tela inicial personalizável, com blocos de resumos, lançamento rápido, saldos, etc;
+	\item Aplicativo móvel, para facilitar a visualizaç\~ao do orçamento e o registro imediato de despesas feitas na rua. Ele precisará de uma interface inovadora na tela de novo lançamento, de modo a diminuir ao máximo a quantidade de interaç\~oes necessárias -- dessa forma, reduzindo o atrito dessa aç\~ao frequente para o usuário;
+	\item Notificaç\~oes de lançamentos a vencer via e-mail e no aplicativo móvel;
+	\item \emph{Resumo histórico, para um entendimento mais amplo da vida financeira do usuário;}
+	\item \emph{Gráficos de análise financeira por período, categorias, e contas;}
+	\item Integraç\~ao com sistema de relatórios de erros e pedidos de novos recursos pelos usuários;
+	\item Sistema de importaç\~ao simplificada dos arquivos exportados pelos principais bancos;
+	\item \emph{Leitor OCR\footnote{Reconhecimento Ótico de Caracteres: tecnologia que traduz uma imagem de texto em palavras} inteligente, para capturar informaç\~oes de um novo lançamento a partir de uma foto do comprovante de crédito/débito, tirada com o celular};
+	\item Equiparaç\~ao de funcionalidades do sistema web com o aplicativo móvel, de forma que os usuários possam ter liberdade total de usar somente o dispositivo móvel se preferirem;
+	\item \emph{Integraç\~ao com sistemas bancários}
+\end{enumerate}
+
+Esta lista de funcionalidades previstas para o sistema n\~ao é definitiva, o que significa que no decorrer do projeto há a possibilidade de novas ideias surgirem e serem realocadas no planejamento, de acordo com a demanda. Além disso, devido ao seu tamanho, foi decidido que os recursos numerados de 10 em diante ser\~ao desenvolvidos numa fase futura do sistema -- portanto, fora do escopo deste Trabalho de Conclus\~ao de Curso.
+
+Dito isto, é notável que a maior restriç\~ao para o projeto será o fator temporal. O objetivo é que o \textbf{Insert Coin} seja um sistema em eterno andamento, com o lançamento gradual de novas funcionalidades. Esse comportamento ajuda a manter os usuários fiéis e um fluxo contínuo de novos clientes. A fidelidade se dará pelos seguintes pontos:
+\begin{itemize}
+	\item Saber que os problemas encontrados ser\~ao resolvidos em breve;
+	\item O usuário será sempre o foco da empresa, que estará sempre adicionando novos recursos para o melhor aproveitamento de suas informaç\~oes financeiras;
+	\item Ele poderá participar indiretamente do desenvolvimento do produto, através do \emph{feedback} interativo, reportando problemas encontrados e sugerindo novas funcionalidades que julgar relevante para si.
+\end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Os Sistemas Atuais}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Principais Concorrentes}
-\emph{Descrever os principais sistemas do mercado atual, como Granatum, Mint, Monefy, Yupee, etc}
+Para um melhor entendimento do mercado atual, é necessário que analisemos em maior profundidade os principais sistemas com os quais vamos concorrer por público. É essencial absorver as funcionalidades que s\~ao o carro-chefe de cada um destes produtos, para que seja possível balancear nosso projeto e fazer frente ao mercado corrente:
+
+\begin{description}
+	\item[Organizze] Sistema mais completo atualmente para o usuário final. Possui diversas contas e tratamento especial para cart\~oes, mas tal diferenciaç\~ao é básica, se restringindo a dividir os lançamentos do cart\~ao em faturas. Possui também metas, que n\~ao contribuem para o planejamento mensal ou futuro. Também conta com lançamentos repetidos e parcelados, além de um aplicativo para avaliaç\~ao dos lançamentos do mês e criaç\~ao de novos. O sistema possui uma interface clean e bem espaçada, o que pode incomodar alguns usuários que est\~ao acostumados com maior volume de informaç\~oes (vindos de outros sistemas ou de planilhas, por exemplo).
+	
+	\item[Granatum] Segundo maior concorrente, apesar de ter foco maior no público corporativo. O sistema de gest\~ao pessoal est\'a abandonado h\'a v\'arios anos, n\~ao recebendo sequer uma melhoria ou correç\~ao. No entanto, gradualmente a vers\~ao empresarial tem sido renovada, ent\~ao talvez o plano pessoal seja atualizado tamb\'em -- ou descontinuado. Em matéria de recursos, é muito similar ao \emph{Organizze}, exceto pelo aplicativo móvel ter sido lançado h\'a pouco tempo, e n\~ao funcionar corretamente com contas pessoais. Também n\~ao possui tratamento especial das despesas de cart\~ao de crédito, e sua listagem de lançamentos se assemelha mais com uma planilha eletr\^onica do que o outro concorrente.
+	
+	\item[Mint] ``Concorrente'' americano. Líder de mercado da América do Norte, principalmente nos Estados Unidos, onde já se consolidou como ferramenta de gest\~ao financeira pessoal há muitos anos. O principal diferencial é a habilidade de importar automaticamente e sem intervenç\~ao todos os lançamentos ocorridos nas contas bancárias e seus cart\~oes, dos mais diversos bancos. Isso permite ao usuário somente categorizar e organizar as despesas, facilitando bastante a tarefa de analisar os gastos e sua saúde financeira de modo geral. No entanto, por causa de sua natureza focada no histórico bancário, o sistema n\~ao permite o planejamento futuro a partir de previ\~oes de gastos e lançamentos adiantados, o que reduz bastante os benefícios para o usuário final. Suas integraç\~oes estreitas permitem a monetizaç\~ao facilitada, oferecendo ao cliente diversos outros produtos, como: cart\~ao com taxas mais em conta no caso de serem identificadas altas taxas nos atuais; previd\^encia privada baseada nas economias passadas; avisos sobre taxas inesperadas cobradas pelos bancos; dentre outros.
+	
+	\item[Monefy] Um dos aplicativos móveis mais inovadores do mercado. Possui uma interface diferente para lançamento de despesas e receitas, que foca na categorizaç\~ao simplificada a partir de ícones. O aplicativo também possui uma calculadora na tela de valor e descriç\~ao, o que facilita a atualizaç\~ao de um lançamento anterior ou o agrupamento de despesas numa só entrada. Ele também possui a opç\~ao de alterar a moeda corrente do sistema, apesar de n\~ao permitir moedas distintas para cada conta. Sua tela principal consiste de um gráfico que facilmente demonstra ao usuário quais s\~ao suas principais fontes de despesas -- mas fora isso, n\~ao colabora com outros métodos de análise. Há também um widget, que pode até mesmo ser usado diretamente da tela de bloqueio do telefone.
+\end{description}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Outros Sistemas}
-\emph{Explicar sobre outras formas de organizacao financeira e suas vantagens e desvantagens, como o uso de um caderno manual, ou planilhas eletronicas.}
+Além dos sistemas digitais, também enfrentaremos um comportamento comum de novos usuários: o receio de migrar de plataforma. Para lidar com a migraç\~ao de outros sistemas, o usuário poderá importar seus dados, caso o outro suporte a exportaç\~ao também. No entanto, o maior receio poderá ser a mudança para um sistema informatizado e \emph{online} a partir de uma organizaç\~ao tradicionalmente analógica. Portanto, vamos tentar entender as principais vantagens e desvantagens dos sistemas n\~ao-inteligentes mais comuns:
+
+\begin{description}
+	\item[Caderno de anotaç\~oes / agenda] O tradicional par \emph{papel \& caneta} ganha o cliente no quesito facilidade, pois é extremamente prático fazer uma nova linha para cada nova despesa. No entanto, o caderno perde e muito quando o usuário deseja: identificar uma despesa antiga; fazer correç\~oes; planejamento do futuro; fazer análises; dentre outros. Em todos estes pontos a interface digital poderá facilitar, e será necessário demonstrar isso para poder convencer este tipo de usuário a migrar.
+	
+	\item[Planilhas eletrônicas] O meio de entrada mais comum para a informatizaç\~ao das finanças de certo grupo de usuários. Ganha na versatilidade e adaptaç\~ao ao modo de pensar de cada pessoa, e também na facilidade de acesso, visto que normalmente n\~ao depende de internet para ser utilizado -- apesar de perder em portabilidade. No entanto, a fluidez de uso do sistema é deficiente, visto que será necessário o conhecimento avançado deste tipo de aplicativo para muitos recursos além do básico da gest\~ao financeira, como resumos, análise de longos períodos, ou visualizaç\~oes gráficas. Além do mais, o usuário sempre corre o risco de ter danos em seu computador e n\~ao possuir um backup recente dos arquivos. Para este tipo de usuário precisaremos indicar as vantagens de um sistema mais robusto e online.
+\end{description}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Motivação para o Novo Sistema}
-\emph{Porque o nosso sistema seria melhor que os atuais?}
+\section{Motivaç\~oes para o Novo Sistema}
+Como indicado na seç\~ao \ref{sec:mercado}, há diversos tipos de usuários que poder\~ao se interessar por um sistema como o \textbf{Insert Coin}. Para trazê-los ao sistema, será necessário chamar a atenç\~ao de cada um deles de forma diferente. Segue aqui uma sugest\~ao de bons motivos para a migraç\~ao, ou mesmo para iniciarem seu controle financeiro pelo projeto:
+
+\begin{description}
+	\item[Controle] O sistema dará nas m\~aos do usuário a possibilidade de ter o controle total sobre seu dinheiro, tendo conhecimento do que entra e sai de suas contas;
+	\item[Organizaç\~ao] Visualizaç\~ao dos dados de entradas e saídas dados em diferentes formatos e granularidades;
+	\item[Simplicidade] A facilidade de uso permitirá ao usuário usufruir destas qualidades sem sofrer com a perda de tempo, que normalmente ocorre em sistemas robustos e complexos;
+	\item[Praticidade] Uma vers\~ao móvel simples do sistema é essencial para diminuir o atrito de uma atividade rotineira como o lançamento de despesas cotidianas;
+	\item[Futuro] A visualizaç\~ao condensada do passado e as possibilidades de metas e lançamentos futuros levará o usuário à previs\~ao de sua saúde financeira; isso permitirá maior conforto e liberdade em compras parceladas, ou o planejamento de sonhos como a compra da casa própria, um carro novo, ou uma grande viagem.
+\end{description}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Problemas dos Sistemas Atuais}
-\emph{Desvantagens da concorrencia}
+Nenhum sistema é perfeito; a principal chance de chegar ao mercado com um produto de sucesso é explorando as fraquezas dos concorrentes, e construindo em cima destes conceitos para que n\~ao sejam repetidos os mesmos erros.
+
+Foi possível identificar, em diversos produtos menores do mercado, características similares de complexidade desnecessária para o usuário mediano, por exemplo. Esse tipo de comportamento afasta o usuário mais leigo, ao invés de estimulá-lo a uma vida financeira mais saudável.
+
+Outra quest\~ao recorrente nas conversas com diversos usuários foi a ``preguiça'' gerada pelo trabalho rotineiro de controle das despesas. A maioria dos sistemas online exige alguns cliques até chegar à tela de novo lançamento, o que dificulta bastante o uso frequente. Os aplicativos móveis ganham nesse quesito, por estarem ``sempre \`a m\~ao'', sendo normalmente de uso mais pr\'atico. Por outro lado, h\'a poucas soluç~oes integradas no mercado, que unam a versatilidade de um sistema móvel com o poder de análise de um sistema \emph{web/desktop}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Situação Desejada}
