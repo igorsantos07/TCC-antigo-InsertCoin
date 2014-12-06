@@ -42,16 +42,50 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.1}Requisitos do Sistema}{18}{section.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Casos de Uso}{18}{section.4.2}
+\contentsline {subsection}{\numberline {4.1.1}Design}{18}{subsection.4.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.1}Diagramas}{18}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.1.2}Implementa\IeC {\c c}\IeC {\~a}o}{18}{subsection.4.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.2}Especifica\IeC {\c c}\IeC {\~o}es}{18}{subsection.4.2.2}
+\contentsline {subsubsection}{Servidor REST}{18}{subsection.4.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}Diagrama Geral de Fluxo de Comunica\IeC {\c c}\IeC {\~a}o (Topologia?)}{18}{section.4.3}
+\contentsline {subsubsection}{Aplicativo Web}{19}{subsection.4.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.4}Modelo Conceitual de Classes / Servi\IeC {\c c}os REST}{18}{section.4.4}
+\contentsline {subsubsection}{Aplicativo M\IeC {\'o}vel}{19}{subsection.4.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.5}Modelo Conceitual de Dados}{18}{section.4.5}
+\contentsline {section}{\numberline {4.2}Casos de Uso}{20}{section.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliografia}{19}{chapter*.2}
+\contentsline {subsection}{\numberline {4.2.1}Especifica\IeC {\c c}\IeC {\~o}es}{21}{subsection.4.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Criar Lan\IeC {\c c}amento}{21}{subsection.4.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Criar Lan\IeC {\c c}amento Repetido}{21}{subsection.4.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Editar Lan\IeC {\c c}amento}{21}{subsection.4.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Remover Lan\IeC {\c c}amento}{21}{subsection.4.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Marcar Lan\IeC {\c c}amento como Pago / n\IeC {\~a}o-pago}{21}{subsection.4.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Criar Categoria}{21}{subsection.4.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Criar Sub-categoria}{21}{subsection.4.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Editar Categoria}{21}{subsection.4.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Nova Meta de Gastos}{21}{subsection.4.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Analisar Gastos dos \IeC {\'U}ltimos Meses}{21}{subsection.4.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Analisar Alcance de Metas}{21}{subsection.4.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Criar Conta}{21}{subsection.4.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Novo Cart\~ao de Cr\IeC {\'e}dito}{21}{subsection.4.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.4}Modelo Conceitual de Classes}{21}{section.4.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.5}Modelo Conceitual de Dados}{21}{section.4.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.3}Diagrama de Topologia}{22}{section.4.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Bibliografia}{23}{chapter*.2}

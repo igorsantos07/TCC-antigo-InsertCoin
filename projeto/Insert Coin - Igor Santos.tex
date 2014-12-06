@@ -57,6 +57,7 @@ O \textbf{Github}, além de possuir um subsistema de tarefas, serve principalmen
 Por fim, para organizar o fluxo de código, será utilizado o \emph{GitFlow}\cite{gitflow} uma metodologia de versionamento que organiza as \emph{tags} de um repositório de forma lógica. A organização precisa desse sistema nos permite criar um fluxo contínuo de \emph{deploys}; podemos configurar nossos servidores de produção para \emph{escutarem} a \emph{tag master} e sempre que houver novos \emph{commits}, eles podem importar a nova versão - isso é feito a partir de \emph{git hooks}, ou automaticamente por alguns sistemas de \emph{PaaS}.
 
 \begin{figure}
+	\centering
 	\includegraphics[scale=0.65]{img/gitflow.png}
 	\caption{Exemplo de como \emph{GitFlow} funciona, exibindo os diversos \emph{branches} da metodologia.}
 \end{figure}
@@ -73,14 +74,20 @@ Por fim, para organizar o fluxo de código, será utilizado o \emph{GitFlow}\cit
 
 \subsection*{Recursos Materiais}
 \begin{itemize}
-	\item Instâncias no \emph{Heroku} (é possível começar com pouco e expandir facilmente no futuro\cite{heroku}) com as seguintes configurações / add-ons:
+	\item Instâncias no \emph{Heroku} (é possível começar com pouco e expandir facilmente no futuro\cite{heroku}) com as seguintes configurações:
 	\begin{itemize}
-		\item \emph{Dynos} (máquinas que processam \emph{requests} web) com \textbf{PHP 5.5}
-		\item Servidor \textbf{PostgreSQL}, também facilmente escalável e seguro\cite{heroku-pgsql}
-		\item Servidor de \emph{Memcache} \textbf{MemCachier} para caches temporários de aplicação
-		\item \textbf{Mandrill by MailChimp} para envio de e-mails de lembretes
-		\item \textbf{NewRelic} para monitoria da performance da aplicação e do banco de dados
-		\item \textbf{Rollbar} para monitoria de erros nas aplicações
+		\item \emph{Dynos web} (máquinas que processam \emph{requests} web) rodando \textbf{PHP 5.5};
+		\item \emph{Dynos de background} 
+		\item Servidor \textbf{PostgreSQL}, também facilmente escalável e seguro\cite{heroku-pgsql};
+		\item Servidor de Cache HTTP \textbf{Varnish} em cada \emph{dyno} para otimizar os requests estáticos ou repetidos;
+	\end{itemize}
+	
+	\item Os seguintes add-ons a partir da plataforma do \emph{Heroku}:
+	\begin{itemize}
+		\item Servidor de \emph{Memcache} \textbf{MemCachier} para caches temporários de aplicação;
+		\item \textbf{Mandrill by MailChimp} para envio de e-mails de lembretes;
+		\item \textbf{NewRelic} para monitoria da performance da aplicação e do banco de dados;
+		\item \textbf{Rollbar} para monitoria de erros nas aplicações.
 	\end{itemize}
 \end{itemize}
 
@@ -228,30 +235,96 @@ Outra quest\~ao recorrente nas conversas com diversos usuários foi a ``preguiç
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Situação Desejada}
-\emph{Objetivos do nosso sistema}
+O objetivo final do projeto é dar ao usuário uma vida financeira mais estável e próspera, lhe permitindo visualizar oportunidades de economia que antes não eram visíveis. Dessa forma, o cliente poderá planejar e alcançar sonhos que antes eram muito distantes, a partir da organização de metas de gastos e de economias. 
+
+Isso poderá ser atingido com um sistema integrado que possibilite a análise de dados e histórico numa interface simples de entender, aliada a um aplicativo móvel que torne prática e rápida a tarefa cotidiana de acompanhamento financeiro. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{O Sistema Proposto}
+Para uma etapa de desenvolvimento fluida e para o continuo aprimoramento do sistema, se faz necessária a documentação técnica do mesmo. É de suma importância que estas informações se mantenham ``vivas'' assim como a própria implementação, de modo que sempre possamos nos apoiar numa documentação sólida e de fácil entendimento sempre que surgirem dúvidas ou para subdividir as tarefas de desenvolvimento em passos lógicos. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Requisitos do Sistema}
+Para que o \textbf{Insert Coin} atinja de forma eficaz seus objetivos será necessário cumprir os requisitos técnicos descritos a seguir. 
+
+\subsection{Design}
+\begin{itemize} 
+	\item Interface limpa e simplificada, de modo a não confundir o usuário desacostumado;
+	\item Categorias de fácil identificação visual;
+\end{itemize}
+
+\subsection{Implementação}
+\begin{itemize} 
+	\item Certificado de segurança SSL para as comunicações de todos os servidores HTTP (tanto de API quanto de aplicação), em todas as aplicações e subsistemas;
+\end{itemize}
+
+\subsubsection{Servidor REST}
+\begin{itemize} 
+	\item Autenticação via \emph{Auth header}\footnote{Método de autenticação padrão do HTTP.}, e \emph{fallback} com cookie, para facilitar a implementação de diversos tipos de clientes\cite{auth};
+	\item Respostas curtas e compactadas com Gzip, para economia de dados e redução da latência no uso móvel;
+	\item Documentação da API extensa e de rápido entendimento;
+	\item Extensa suíte de testes para garantir que os aplicativos não falharão por causa da API;
+\end{itemize}
+
+\subsubsection{Aplicativo Web}
+\begin{itemize}
+	\item Layout fluido e responsivo, que se adapte a diversos formatos de telas, como celulares, tablets, e telas largas ou estreitas\footnote{Uma visualização mais estreita do sistema, principalmente nas telas de lançamentos, pode ser útil em atividades comparativas --- quando acessando lado a lado com o histórico bancário, por exemplo} no computador;
+	\item Vis\~oes detalhadas dos dados, com todas as opç\~oes oferecidas para históricos, resumos e gráficos;
+\end{itemize}
+
+\subsubsection{Aplicativo Móvel}
+\begin{itemize}
+	\item Suporte a diversas plataformas (mínimo: iOS e Android), para evitar a perda de usuários por causa do ambiente;
+	\item Login automático e silencioso após a autenticaç\~ao inicial;
+	\item Funcionamento \emph{offline} sem afetar a usabilidade ou performance;
+	\item Sincronizaç\~ao de dados manual e automática em \emph{background} (quando encontrar uma conex\~ao WiFi, ou via dados móveis também, caso o usuário deseje);
+	\item Funcionalidades básicas de análise, como históricos, resumos, filtros e alguns gráficos;
+\end{itemize}
+		
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Casos de Uso}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Diagramas}
+\begin{figure}
+	\section{Casos de Uso}
+	\centering
+	\includegraphics[scale=0.6]{diagramas/casos-de-uso.jpg}
+	\caption{Diagrama de Casos de Uso}
+\end{figure}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Especificações}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Diagrama Geral de Fluxo de Comunicação (Topologia?)}
-\emph{Indicar aqui o fluxo de comunicacao entre o servidor REST e os mecanismos de cache da rede e dos aplicativos web e mobile.}
+\subsubsection{Criar Lançamento}
+\subsubsection{Criar Lançamento Repetido}
+\subsubsection{Editar Lançamento}
+\subsubsection{Remover Lançamento}
+\subsubsection{Marcar Lançamento como Pago / não-pago}
+\subsubsection{Criar Categoria}
+\subsubsection{Criar Sub-categoria}
+\subsubsection{Editar Categoria}
+\subsubsection{Remover Categoria / Sub-categoria}
+\subsubsection{Criar Meta de Gastos}
+\subsubsection{Editar Meta de Gastos}
+\subsubsection{Remover Meta de Gastos}
+\subsubsection{Analisar Alcance de Metas}
+\subsubsection{Analisar Gastos dos Últimos Meses}
+\subsubsection{Criar Conta}
+\subsubsection{Criar Cart\~ao de Crédito}
+\subsubsection{Desativar / reativar conta / cartão}
+\subsubsection{Remover conta / cartão}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Modelo Conceitual de Classes / Serviços REST}
-\emph{Provavelmente muito similar ao modelo de dados, visto que os objetos do servidor REST serao todos modelos de dados, e a principio nao faz sentido fazer modelagem de classes de sistemas JS (que sao orientados a prototipos e nao tem heranca nativamente). Portanto, talvez seja substituido por uma previa dos servicos REST que poderiam ser fornecidos.}
+\begin{figure}
+	\section{Diagrama de Topologia}
+	\centering
+	\includegraphics[scale=0.5]{diagramas/topologia.jpg}
+	\caption{Diagrama de Topologia, indicando os diversos servidores de aplicaç\~ao, de cache, serviços adicionais e o fluxo de comunicaç\~ao com os aplicativos-cliente}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Modelo Conceitual de Classes}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Modelo Conceitual de Dados}
