@@ -93,7 +93,13 @@ Por fim, para organizar o fluxo de código, será utilizado o \emph{GitFlow}\cit
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Cronograma de Trabalho}
-\emph{Diagrama de Gantt.}
+
+%=======================================
+%
+%    [TODO] Criar gráfico de Gantt
+%
+%=======================================
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{A Empresa e o Negócio}
@@ -247,6 +253,15 @@ Para uma etapa de desenvolvimento fluida e para o continuo aprimoramento do sist
 \section{Requisitos do Sistema}
 Para que o \textbf{Insert Coin} atinja de forma eficaz seus objetivos será necessário cumprir os requisitos técnicos descritos a seguir. 
 
+
+%=======================================
+%
+%    [TODO] Revisar requisitos para
+%           dividir entre funcionais
+%           e não-funcionais
+%
+%=======================================
+
 \subsection{Design}
 \begin{itemize} 
 	\item Interface limpa e simplificada, de modo a não confundir o usuário desacostumado;
@@ -283,7 +298,6 @@ Para que o \textbf{Insert Coin} atinja de forma eficaz seus objetivos será nece
 		
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \begin{figure}
 	\section{Casos de Uso}
 	\centering
@@ -315,20 +329,59 @@ Para que o \textbf{Insert Coin} atinja de forma eficaz seus objetivos será nece
 \subsubsection{Remover conta / cartão}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}
-	\section{Diagrama de Topologia}
+\pagebreak
+\section{Diagrama de Topologia}
+\begin{figure}[!h]
 	\centering
-	\includegraphics[scale=0.5]{diagramas/topologia.jpg}
+	\includegraphics[scale=0.48]{diagramas/topologia.jpg}
 	\caption{Diagrama de Topologia, indicando os diversos servidores de aplicaç\~ao, de cache, serviços adicionais e o fluxo de comunicaç\~ao com os aplicativos-cliente}
 \end{figure}
 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Modelo Conceitual de Classes}
+Neste diagrama descrevemos as principais classes do Servidor REST do projeto. É possível notar que as classes refletem em boa parte o Modelo de Dados (proposto na seção seguinte, \ref{sec:mod_dados}). Isso ocorre pois o servidor funcionará, principalmente, como um sistema de banco de dados de forma simplificada, armazenando todas as regras de negócio e, em alguns casos, expondo métodos mais inteligentes e ágeis que o tradicional \emph{CRUD}. 
+
+O método de espelhamento do banco proporcionará aos aplicativos a maior liberdade possível para serem desenvolvidos e se adaptarem aos seus ambientes, ao invés de se adaptarem ao modelo de dados proposto por um servidor mais enxuto. No entanto, ao mesmo tempo ele garante os requisitos básicos de segurança e funcionalidades, por implementar todas as regras de negócio relacionadas aos dados conjuntamente com os mesmos.
+
+Todos os métodos demonstrados por estas classes são baseados no formato da biblioteca \emph{Restler}, que interpreta classes gerais (não-necessariamente com uma hierarquia em comum) e abre seus métodos públicos num \emph{endpoint HTTP}. Dessa forma, as classes se tornam \emph{recursos}, e os métodos possuem nomes dos \emph{verbos HTTP}; opcionalmente, também são acompanhados de um sufixo que indica uma ação mais específica dentro daquele recurso.
+
+\begin{table}[hb]
+\begin{flushleft}
+\begin{tabular}{|lllp{4.2cm}|}
+	\hline
+	\textbf{Método}					& \textbf{Requisição HTTP}		& \textbf{No corpo}	& \textbf{Resposta}			\\\hline
+	Category::get()					& \texttt{GET} /category			& -- -- --			& Lista de \emph{Category}	\\\hline
+	Account::get(\$id)				& \texttt{GET} /account/«id»		& -- -- --			& Um objeto \emph{Account}	\\\hline
+	Icon::post(\$name, \$img)			& \texttt{POST} /icon			& \texttt{name, img}	& Novo objeto \emph{Icon}		\\\hline
+	Goal::putFilled(\$id, \$filled)	& \texttt{PUT} /goal/«id»/filled	& \texttt{filled}	& Novo valor do campo \emph{Goal::filled} \\\hline
+	User::delete(\$id)				& \texttt{DELETE} /user/«id»		& -- -- --			& Último estado de User, antes do registro ser removido \\\hline
+\end{tabular} 
+\end{flushleft}
+\caption{Exemplos da convers\~ao das classes para recursos HTTP, com \emph{Restler}}
+\end{table}
+	
+\begin{figure}[!hb]
+	\includegraphics[scale=0.47]{diagramas/classes.jpg}
+	\caption{Diagrama de Classes, demonstrando as principais classes do sistema REST}
+\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Modelo Conceitual de Dados}
-\emph{Auto-explicativo.}
+\begin{figure}
+	\section{Modelo Conceitual de Dados}
+	\label{sec:mod_dados}
+	\centering
+	\includegraphics[scale=0.55]{diagramas/er.png}
+	\caption{Diagrama de Entidade-Relacionamento, descrevendo o modelo de dados proposto para o projeto}
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
+	%
+	% [TODO] Falta adicionar:
+	% - transaction.paid [N bool=false]
+	% - category.user+id [NN int]
+	%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \printbibliography
