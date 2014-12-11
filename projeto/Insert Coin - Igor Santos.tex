@@ -92,13 +92,14 @@ Por fim, para organizar o fluxo de código, será utilizado o \emph{GitFlow}\cit
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Cronograma de Trabalho}
 
-%=======================================
-%
-%    [TODO] Criar gráfico de Gantt
-%
-%=======================================
+\begin{figure}[!hp]
+	\section{Cronograma de Trabalho}
+	\centering
+	\includegraphics[scale=0.55]{diagramas/gantt.png}
+	\caption{Gráfico de Gantt, descrevendo o planejamento do projeto a partir de sua linha do tempo}
+\end{figure}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{A Empresa e o Negócio}
@@ -219,7 +220,7 @@ Além dos sistemas digitais, também enfrentaremos um comportamento comum de nov
 \end{description}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Motivaç\~oes para o Novo Sistema}
+\section{Motivações para o Novo Sistema}
 Como indicado na seç\~ao \ref{sec:mercado}, há diversos tipos de usuários que poder\~ao se interessar por um sistema como o \textbf{Insert Coin}. Para trazê-los ao sistema, será necessário chamar a atenç\~ao de cada um deles de forma diferente. Segue aqui uma sugest\~ao de bons motivos para a migraç\~ao, ou mesmo para iniciarem seu controle financeiro pelo projeto:
 
 \begin{description}
@@ -374,17 +375,8 @@ Todos os métodos demonstrados por estas classes são baseados no formato da bib
 	\section{Modelo Conceitual de Dados}
 	\label{sec:mod_dados}
 	\centering
-	\includegraphics[scale=0.55]{diagramas/er.png}
+	\includegraphics[scale=0.6]{diagramas/er.png}
 	\caption{Diagrama de Entidade-Relacionamento, descrevendo o modelo de dados proposto para o projeto}
-
-	%=======================================
-	%
-	% [TODO] Falta adicionar:
-	% - transaction.paid [N bool=false]
-	% - category.user+id [NN int]
-	%
-	%=======================================
-	
 \end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
