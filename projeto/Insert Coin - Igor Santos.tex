@@ -343,61 +343,136 @@ Para que o \textbf{Insert Coin} atinja de forma eficaz seus objetivos será nece
 
 \subsubsection{[\UC] Editar Lançamento}
 \begin{enumerate}[itemsep=-1ex]
-	\item O usuário indica querer criar um novo lançamento de receita/despesa
+	\item O usuário visualiza a lista de lançamentos para uma ou diversas contas;
+	\item O sistema exibe uma opção de editar cada um dos lançamentos;
+	\item O usuário seleciona qual lançamento ele deseja editar;
+	\item O sistema exibe os dados atuais do lançamento e pergunta quais são as novas informações para o valor, categoria, conta(s), e descrição;
+	\item O usuário preenche com novos dados;
+	\item O usuário salva o registro;
+	\item O sistema exibe os dados atualizados na mesma lista de lançamentos.
 \end{enumerate}
 
 \subsubsection{[\UC] Remover Lançamento}
 \begin{enumerate}[itemsep=-1ex]
-	\item O usuário indica querer criar um novo lançamento de receita/despesa
+	\item O usuário visualiza a lista de lançamentos para uma ou diversas contas;
+	\item O sistema exibe uma opção de remover cada um dos lançamentos;
+	\item O usuário seleciona qual lançamento ele deseja remover;
+	\item O sistema pede confirmação para a remoção do registro;
+		\begin{enumerate}[itemsep=-1ex,topsep=-1ex]
+			\item O usuário cancela;
+			\item O usuário confirma;
+				\begin{enumerate}[itemsep=-1ex,topsep=-1ex]
+					\item O sistema apaga o registro;
+				\end{enumerate}
+		\end{enumerate}
+	\item O sistema leva o usuário novamente para a mesma lista de lançamentos, sem o registro selecionado caso o mesmo tenha sido apagado.
 \end{enumerate}
 \subsubsection{[\UC] Marcar Lançamento como Pago / não-pago}
 \begin{enumerate}[itemsep=-1ex]
-	\item O usuário indica querer criar um novo lançamento de receita/despesa
+	\item O usuário visualiza a lista de lançamentos para uma ou diversas contas;
+	\item O sistema exibe uma opção de alterar o status de cada um dos lançamentos:
+		\begin{itemize}[itemsep=-1ex,topsep=-1ex]
+			\item Para cada registro pago, é exibida uma opção para alterar para não-pago;
+			\item Para os não-pagos, é exibida a opção de marcar como pago;
+		\end{itemize}
+	\item O usuário seleciona qual lançamento ele deseja alterar o status;
+	\item O sistema altera o status do lançamento selecionado;
+	\item O sistema leva o usuário novamente para a mesma lista de lançamentos, com a informação atualizada.
 \end{enumerate}
 
 \subsubsection{[\UC] Criar Categoria}
 \begin{enumerate}[itemsep=-1ex]
-	\item O usuário indica querer criar um novo lançamento de receita/despesa
+	\item O usuário indica querer criar uma nova categoria no sistema;
+	\item O sistema pergunta o nome da categoria, sugere uma cor aleatória, e permite que o usuário escolha uma cor diferente dentre uma lista pré-configurada;
+	\item O usuário confirma os dados;
+	\item O sistema salva a nova categoria;
+	\item O sistema exibe a listagem de categorias já cadastradas.
 \end{enumerate}
 
 \subsubsection{[\UC] Criar Sub-categoria}
 \begin{enumerate}[itemsep=-1ex]
-	\item O usuário indica querer criar um novo lançamento de receita/despesa
+	\item O usuário visualiza a lista de categorias cadastradas;
+	\item O sistema exibe uma opção para criar uma sub-categoria em cada uma das categorias já existentes;
+	\item O usuário seleciona a categoria onde criar a sub-categoria;
+	\item O sistema pergunta o nome da sub-categoria, sugere uma cor aleatória, e permite que o usuário escolha uma cor diferente dentre uma lista pré-configurada;
+	\item O usuário confirma os dados;
+	\item O sistema salva a nova sub-categoria;
+	\item O sistema exibe a listagem de categorias já cadastradas.
 \end{enumerate}
 
-\subsubsection{[\UC] Editar Categoria}
+\subsubsection{[\UC] Editar Categoria / Sub-categoria}
 \begin{enumerate}[itemsep=-1ex]
-	\item O usuário indica querer criar um novo lançamento de receita/despesa
+	\item O usuário visualiza a lista de categorias cadastradas;
+	\item O sistema exibe uma opção para editar uma categoria ou sub-categoria;
+	\item O sistema exibe os dados atuais da categoria e pergunta quais são as novas informações para o nome e a cor;
+	\begin{itemize}[itemsep=-1ex,topsep=-1ex]
+		\item Caso seja uma sub-categoria, também há a opç\~ao de editar a categoria-pai;
+	\end{itemize}
+	\item O usuário preenche com novos dados;
+	\item O usuário salva as informaç\~oes;
+	\item O sistema exibe os dados atualizados na mesma lista de categorias.
 \end{enumerate}
 
 \subsubsection{[\UC] Remover Categoria / Sub-categoria}
 \begin{enumerate}[itemsep=-1ex]
-	\item O usuário indica querer criar um novo lançamento de receita/despesa
+	\item O usuário visualiza a lista de categorias cadastradas;
+	\item O sistema exibe uma opção para remover uma categoria ou sub-categoria;
+	\item O usuário indica qual categoria ou sub-categoria ele deseja remover;
+	\item O sistema avisa sobre as consequ\^encias da operaç\~ao e pede confirmaç\~ao:
+	\begin{itemize}[itemsep=-1ex,topsep=-1ex]
+		\item Caso seja uma sub-categoria, o sistema deve avisar sobre as transaç\~oes ligadas a ela ficarem descategorizadas;
+		\item Caso seja uma categoria, além da informaç\~ao acima também deve alertar sobre as sub-categorias também serem apagadas, e seus registros também ficarem descategorizados;
+	\end{itemize}
+	\item O usuário confirma a operaç\~ao;
+	\item O sistema apaga a categoria ou sub-categoria;
+	\item O sistema leva o usuário de volta para a lista de categorias.
 \end{enumerate}
 
 \subsubsection{[\UC] Criar Meta de Gastos}
 \begin{enumerate}[itemsep=-1ex]
-	\item O usuário indica querer criar um novo lançamento de receita/despesa
+	\item O usuário indica querer criar uma meta de gastos;
+	\item O sistema pergunta qual o valor, m\^es e categoria da meta;
+	\item O usuário preenche os dados;
+	\item O usuário salva as informaç\~oes;
+	\item O sistema cria a meta;
+	\item O sistema leva o usuário para a lista de metas do m\^es da meta criada.
 \end{enumerate}
 
 \subsubsection{[\UC] Editar Meta de Gastos}
 \begin{enumerate}[itemsep=-1ex]
-	\item O usuário indica querer criar um novo lançamento de receita/despesa
+	\item O usuário visualiza a lista de metas para o mês corrente;
+	\item O usuário seleciona o mês da meta que deseja alterar;
+	\item O sistema exibe uma opção de edição para cada meta listada;
+	\item O usuário indica qual meta deseja editar;
+	\item O sistema exibe os dados atuais da meta e pergunta qual é o novo valor;
+	\item O usuário salva os dados;
+	\item O sistema efetua a alteração de valor;
+	\item O sistema leva o usuário de volta à lista de metas que ele visualizava anteriormente.
 \end{enumerate}
 
 \subsubsection{[\UC] Remover Meta de Gastos}
 \begin{enumerate}[itemsep=-1ex]
-	\item O usuário indica querer criar um novo lançamento de receita/despesa
+	\item O usuário visualiza a lista de metas para o mês corrente;
+	\item O usuário seleciona o mês da meta que deseja remover;
+	\item O sistema exibe uma opção de remoção para cada meta listada;
+	\item O usuário indica qual meta deseja esvaziar;
+	\item O sistema zera a meta;
+	\item O sistema leva o usuário de volta à lista de metas que ele visualizava anteriormente.
 \end{enumerate}
 
 \subsubsection{[\UC] Analisar Alcance de Metas}
 \begin{enumerate}[itemsep=-1ex]
-	\item O usuário indica querer criar um novo lançamento de receita/despesa
+	\item O usuário visualiza a lista de metas;
+	\item O usuário seleciona um mês para ver metas previstas ou passadas para aquele período;
+	\item O sistema exibe, para cada meta, a categoria e as transações da dela, indicando com uma barra de progresso se a meta já foi atingida ou quanto falta para atingir.
 \end{enumerate}
 
 \subsubsection{[\UC] Analisar Gastos dos Últimos Meses}
 \begin{enumerate}[itemsep=-1ex]
-	\item O usuário indica querer criar um novo lançamento de receita/despesa
+	\item O usuário acessa a ferramenta de análise de gastos;
+	\item O usuário seleciona o mês para o qual deseja efetuar a operação;
+	\item O sistema exibe gráficos de despesas com diferentes granularidades de informação, e uma lista sumarizada das despesas e entradas por categoria e sub-categoria;
+	\item O sistema permite a seleção de novos períodos e o destaque de categorias no gráfico, para fins de comparação com os gastos gerais ou para comparar com outras categorias.
 \end{enumerate}
 
 \subsubsection{[\UC\label{uc:criar_conta}] Criar Conta}
@@ -482,6 +557,7 @@ Todos os métodos demonstrados por estas classes são baseados no formato da bib
 	\includegraphics[scale=0.47]{diagramas/classes.jpg}
 	\caption{Diagrama de Classes, demonstrando as principais classes do sistema REST}
 \end{figure}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}
