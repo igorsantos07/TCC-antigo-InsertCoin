@@ -5,6 +5,9 @@
 \usepackage{csquotes}
 \usepackage[brazil]{babel}
 \usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage{fmtcount}
+\usepackage{xifthen}
 \usepackage[all,defaultlines=2]{nowidow}
 \usepackage[multiple]{footmisc}
 \usepackage{xcolor,graphicx}
@@ -297,41 +300,151 @@ Para que o \textbf{Insert Coin} atinja de forma eficaz seus objetivos será nece
 		
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}
-	\section{Casos de Uso}
+\pagebreak
+\section{Casos de Uso}
+
+\begin{figure}[!h]
 	\centering
 	\includegraphics[scale=0.6]{diagramas/casos-de-uso.jpg}
 	\caption{Diagrama de Casos de Uso}
 \end{figure}
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Especificações}
+\newcommand\pad[1] {\expandafter\realpad\csname c@#1\endcsname}
+\newcommand\realpad[1] {%
+	\ifnum #1<10 0\fi%
+	\number#1%
+}
+\newcounter{UC}
+\renewcommand{\theUC} {UC-\pad{UC}}
+\DeclareRobustCommand{\UC} {%
+	\refstepcounter{UC}%
+	\theUC%
+}
 
-%=======================================
-%
-%    [TODO] Especificar casos de uso
-%
-%=======================================
+\subsubsection{[\UC\label{uc:criar_lancamento}] Criar Lançamento}
+\begin{enumerate}[itemsep=-1ex]
+	\item O usuário indica querer criar um novo lançamento de receita/despesa;
+	\item O sistema pergunta se é receita, despesa ou transferência de fundos;
+	\item O sistema pergunta qual é o valor, categoria e conta(s) de destino (e origem, no caso da transferência);
+	\item \label{uc:insert:repetido} O sistema pergunta, opcionalmente, se há uma descrição detalhada;
+	\item O usuário preenche todos os dados;
+	\item O usuário salva o registro;
+	\item O sistema armazena os dados;
+	\item O sistema exibe os dados na planilha ou indica que foram armazenados, permitindo a criação de um novo registro.
+\end{enumerate}
 
-\subsubsection{Criar Lançamento}
-\subsubsection{Criar Lançamento Repetido}
-\subsubsection{Editar Lançamento}
-\subsubsection{Remover Lançamento}
-\subsubsection{Marcar Lançamento como Pago / não-pago}
-\subsubsection{Criar Categoria}
-\subsubsection{Criar Sub-categoria}
-\subsubsection{Editar Categoria}
-\subsubsection{Remover Categoria / Sub-categoria}
-\subsubsection{Criar Meta de Gastos}
-\subsubsection{Editar Meta de Gastos}
-\subsubsection{Remover Meta de Gastos}
-\subsubsection{Analisar Alcance de Metas}
-\subsubsection{Analisar Gastos dos Últimos Meses}
-\subsubsection{Criar Conta}
-\subsubsection{Criar Cart\~ao de Crédito}
-\subsubsection{Desativar / reativar conta / cartão}
-\subsubsection{Remover conta / cartão}
+\subsubsection{[\UC] Criar Lançamento Repetido}
+\emph{Este Caso de Uso é uma extensão do \ref{uc:criar_lancamento}. Os passos s\~ao inseridos após o passo \ref{uc:insert:repetido} acima.}
+\begin{enumerate}[itemsep=-1ex,topsep=-1ex]
+	\item O sistema pergunta se a despesa deve ser repetida de forma indefinida ou como despesa parcelada;
+	\item O usuário define o meio de repetição.
+\end{enumerate}
+
+\subsubsection{[\UC] Editar Lançamento}
+\begin{enumerate}[itemsep=-1ex]
+	\item O usuário indica querer criar um novo lançamento de receita/despesa
+\end{enumerate}
+
+\subsubsection{[\UC] Remover Lançamento}
+\begin{enumerate}[itemsep=-1ex]
+	\item O usuário indica querer criar um novo lançamento de receita/despesa
+\end{enumerate}
+\subsubsection{[\UC] Marcar Lançamento como Pago / não-pago}
+\begin{enumerate}[itemsep=-1ex]
+	\item O usuário indica querer criar um novo lançamento de receita/despesa
+\end{enumerate}
+
+\subsubsection{[\UC] Criar Categoria}
+\begin{enumerate}[itemsep=-1ex]
+	\item O usuário indica querer criar um novo lançamento de receita/despesa
+\end{enumerate}
+
+\subsubsection{[\UC] Criar Sub-categoria}
+\begin{enumerate}[itemsep=-1ex]
+	\item O usuário indica querer criar um novo lançamento de receita/despesa
+\end{enumerate}
+
+\subsubsection{[\UC] Editar Categoria}
+\begin{enumerate}[itemsep=-1ex]
+	\item O usuário indica querer criar um novo lançamento de receita/despesa
+\end{enumerate}
+
+\subsubsection{[\UC] Remover Categoria / Sub-categoria}
+\begin{enumerate}[itemsep=-1ex]
+	\item O usuário indica querer criar um novo lançamento de receita/despesa
+\end{enumerate}
+
+\subsubsection{[\UC] Criar Meta de Gastos}
+\begin{enumerate}[itemsep=-1ex]
+	\item O usuário indica querer criar um novo lançamento de receita/despesa
+\end{enumerate}
+
+\subsubsection{[\UC] Editar Meta de Gastos}
+\begin{enumerate}[itemsep=-1ex]
+	\item O usuário indica querer criar um novo lançamento de receita/despesa
+\end{enumerate}
+
+\subsubsection{[\UC] Remover Meta de Gastos}
+\begin{enumerate}[itemsep=-1ex]
+	\item O usuário indica querer criar um novo lançamento de receita/despesa
+\end{enumerate}
+
+\subsubsection{[\UC] Analisar Alcance de Metas}
+\begin{enumerate}[itemsep=-1ex]
+	\item O usuário indica querer criar um novo lançamento de receita/despesa
+\end{enumerate}
+
+\subsubsection{[\UC] Analisar Gastos dos Últimos Meses}
+\begin{enumerate}[itemsep=-1ex]
+	\item O usuário indica querer criar um novo lançamento de receita/despesa
+\end{enumerate}
+
+\subsubsection{[\UC\label{uc:criar_conta}] Criar Conta}
+\begin{enumerate}[itemsep=-1ex]
+	\item O usuário indica querer criar um nova nova conta;
+	\item O sistema pergunta qual é o tipo de conta desejada: Corrente ou Poupança; \label{uc:insert:cartao}
+	\item O usuário define o tipo de conta;
+	\item O sistema pergunta o nome desejado para a conta, o saldo atual e o ícone representativo da mesma, a partir de uma lista de opções pré-definidas. Inicialmente, o sistema apresentará um ícone padrão para conta-corrente e outro para conta-poupança;
+	\item O usuário salva os dados;
+	\item O sistema cria a conta e uma transação inicial com o saldo corrente;
+	\item O sistema leva o usuário para a listagem de transações da nova conta, para que o cliente possa populá-la opcionalmente.
+\end{enumerate}
+
+\subsubsection{[\UC] Criar Cart\~ao de Crédito}
+\emph{Este Caso de Uso é uma extensão do \ref{uc:criar_conta}. Os passos modificados começam no \ref{uc:insert:cartao}.}
+\begin{enumerate}[itemsep=-1ex,topsep=-1ex]
+	\item O sistema também permite o tipo de conta ``Cart\~ao'';
+	\item O usuário escolhe ``Cart\~ao'';
+	\item O sistema também pergunta as datas de fechamento e vencimento da fatura do cart\~ao;
+	\item O usuário preenche os dados como em \ref{uc:criar_conta} e o caso de uso prossegue normalmente.
+\end{enumerate}
+
+\subsubsection{[\UC] Desativar / reativar conta / cartão}
+\begin{enumerate}[itemsep=-1ex]
+	\item O usuário visualiza a lista de contas ou cart\~oes que possui;
+	\item O sistema exibe uma opç\~ao em cada conta:
+	\begin{itemize}[itemsep=-1ex,topsep=-1ex]
+		\item Para contas ativas, a opç\~ao exibe ``Desativar'';
+		\item Para contas inativas, a opç\~ao exibe ``Ativar'';
+	\end{itemize}
+	\item O usuário seleciona a operaç\~ao desejada para a conta que deseja modificar;
+	\item O sistema efetua a operaç\~ao;
+	\item O sistema leva o usuário de volta à tela de listagem de contas.
+\end{enumerate}
+
+\subsubsection{[\UC] Remover conta / cartão}
+\begin{enumerate}[itemsep=-1ex]
+	\item O usuário visualiza a lista de contas ou cart\~oes que possui;
+	\item O usuário seleciona qual deseja apagar;
+	\item O sistema alerta que a operaç\~ao é irreversível e que todas as transaç\~oes ser\~ao removidas junto com a conta;
+	\begin{enumerate}[itemsep=-1ex,topsep=-1ex]
+		\item O usuário confirma e a conta é removida;
+		\item O usuário muda de ideia e cancela a operaç\~ao;
+	\end{enumerate}
+	\item O sistema leva o usuário de volta à tela de listagem de contas.
+\end{enumerate}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \pagebreak
